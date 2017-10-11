@@ -22,7 +22,7 @@ $jquery-ui-icon-prefix: ui-icon;
 	@include fa-icon;
 	
 	&.#{$jquery-ui-icon-prefix}-blank{
-		
+		&:before{content: ' '}
 	}
 	&.#{$jquery-ui-icon-prefix}-caret-1-n{
 		&:before{content: $fa-var-angle-up}
@@ -480,16 +480,16 @@ $jquery-ui-icon-prefix: ui-icon;
 
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-triangle-e{
-
+		&:before{content: $fa-var-chevron-circle-right}
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-triangle-s{
-
+		&:before{content: $fa-var-chevron-circle-down}
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-triangle-w{
-
+		&:before{content: $fa-var-chevron-circle-left}
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-triangle-n{
-
+		&:before{content: $fa-var-chevron-circle-up}
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-arrow-e{
 

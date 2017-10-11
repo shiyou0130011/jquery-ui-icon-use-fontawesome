@@ -429,7 +429,6 @@ $jquery-ui-icon-prefix: ui-icon;
 	}
 	&.#{$jquery-ui-icon-prefix}-seek-prev{
 		&:before{content: $fa-var-backward}
-
 	}
 	&.#{$jquery-ui-icon-prefix}-seek-end{
 		&:before{content: $fa-var-step-forward}
@@ -471,13 +470,13 @@ $jquery-ui-icon-prefix: ui-icon;
 		&:before{content: $fa-var-battery-full}
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-plus{
-
+		&:before{content: $fa-var-plus-circle}
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-minus{
-
+		&:before{content: $fa-var-minus-circle}
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-close{
-
+		&:before{content: $fa-var-times-circle}
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-triangle-e{
 		&:before{content: $fa-var-chevron-circle-right}
@@ -492,16 +491,16 @@ $jquery-ui-icon-prefix: ui-icon;
 		&:before{content: $fa-var-chevron-circle-up}
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-arrow-e{
-
+		&:before{content: $fa-var-arrow-circle-riight}
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-arrow-s{
-
+		&:before{content: $fa-var-arrow-circle-down}
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-arrow-w{
-
+		&:before{content: $fa-var-arrow-circle-left}
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-arrow-n{
-
+		&:before{content: $fa-var-arrow-circle-up}
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-zoomin{
 

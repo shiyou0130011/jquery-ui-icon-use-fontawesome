@@ -18,13 +18,6 @@ $fa-font-path:"//netdna.bootstrapcdn.com/font-awesome/4.7.0/fonts";
 
 $jquery-ui-icon-prefix: ui-icon;
 
-/// 設定 Font Awesome Icon，避免缺乏變數造成的錯誤
-@mixin set-fa-icon($icon){
-	@if(variable-exists($icon)){
-		&:before{content: $icon}
-	}
-}
-
 .#{$jquery-ui-icon-prefix}{
 	@include fa-icon;
 	
@@ -32,25 +25,33 @@ $jquery-ui-icon-prefix: ui-icon;
 		&:before{content: ' '}
 	}
 	&.#{$jquery-ui-icon-prefix}-caret-1-n{
-		@include set-fa-icon($fa-var-angle-up);
+		@if(variable-exists(fa-var-angle-up)){
+			&:before{content: $fa-var-angle-up}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-caret-1-ne{
 
 	}
 	&.#{$jquery-ui-icon-prefix}-caret-1-e{
-		@include set-fa-icon($fa-var-angle-right);
+		@if(variable-exists(fa-var-angle-right)){
+			&:before{content: $fa-var-angle-right}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-caret-1-se{
 
 	}
 	&.#{$jquery-ui-icon-prefix}-caret-1-s{
-		@include set-fa-icon($fa-var-angle-down);
+		@if(variable-exists(fa-var-angle-down)){
+			&:before{content: $fa-var-angle-down}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-caret-1-sw{
 
 	}
 	&.#{$jquery-ui-icon-prefix}-caret-1-w{
-		@include set-fa-icon($fa-var-angle-left);
+		@if(variable-exists(fa-var-angle-left)){
+			&:before{content: $fa-var-angle-left}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-caret-1-nw{
 
@@ -62,25 +63,33 @@ $jquery-ui-icon-prefix: ui-icon;
 		&:before{content: '#{$fa-var-angle-left} #{$fa-var-angle-right}'}
 	}
 	&.#{$jquery-ui-icon-prefix}-triangle-1-n{
-		@include set-fa-icon($fa-var-caret-up);
+		@if(variable-exists(fa-var-caret-up)){
+			&:before{content: $fa-var-caret-up}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-triangle-1-ne{
 
 	}
 	&.#{$jquery-ui-icon-prefix}-triangle-1-e{
-		@include set-fa-icon($fa-var-caret-right);
+		@if(variable-exists(fa-var-caret-right)){
+			&:before{content: $fa-var-caret-right}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-triangle-1-se{
 
 	}
 	&.#{$jquery-ui-icon-prefix}-triangle-1-s{
-		@include set-fa-icon($fa-var-caret-down);
+		@if(variable-exists(fa-var-caret-down)){
+			&:before{content: $fa-var-caret-down}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-triangle-1-sw{
 
 	}
 	&.#{$jquery-ui-icon-prefix}-triangle-1-w{
-		@include set-fa-icon($fa-var-caret-left);
+		@if(variable-exists(fa-var-caret-left)){
+			&:before{content: $fa-var-caret-left}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-triangle-1-nw{
 		
@@ -92,25 +101,33 @@ $jquery-ui-icon-prefix: ui-icon;
 		&:before{content: '#{$fa-var-caret-left} #{$fa-var-caret-right}'}
 	}
 	&.#{$jquery-ui-icon-prefix}-arrow-1-n{
-		@include set-fa-icon($fa-var-arrow-up);
+		@if(variable-exists(fa-var-arrow-up)){
+			&:before{content: $fa-var-arrow-up}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-arrow-1-ne{
 
 	}
 	&.#{$jquery-ui-icon-prefix}-arrow-1-e{
-		@include set-fa-icon($fa-var-arrow-right);
+		@if(variable-exists(fa-var-arrow-right)){
+			&:before{content: $fa-var-arrow-right}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-arrow-1-se{
 
 	}
 	&.#{$jquery-ui-icon-prefix}-arrow-1-s{
-		@include set-fa-icon($fa-var-arrow-down);
+		@if(variable-exists(fa-var-arrow-down)){
+			&:before{content: $fa-var-arrow-down}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-arrow-1-sw{
 
 	}
 	&.#{$jquery-ui-icon-prefix}-arrow-1-w{
-		@include set-fa-icon($fa-var-arrow-left);
+		@if(variable-exists(fa-var-arrow-left)){
+			&:before{content: $fa-var-arrow-left}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-arrow-1-nw{
 
@@ -119,7 +136,9 @@ $jquery-ui-icon-prefix: ui-icon;
 
 	}
 	&.#{$jquery-ui-icon-prefix}-arrow-2-ne-sw{
- 		@include set-fa-icon($fa-var-expand);
+ 		@if(variable-exists(fa-var-expand)){
+			&:before{content: $fa-var-expand}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-arrow-2-e-w{
 		&:before{content: '#{$fa-var-arrow-left} #{$fa-var-arrow-right}'}
@@ -224,187 +243,307 @@ $jquery-ui-icon-prefix: ui-icon;
 
 	}
 	&.#{$jquery-ui-icon-prefix}-arrow-4{
-		@include set-fa-icon($fa-var-arrows);
+		@if(variable-exists(fa-var-arrows)){
+			&:before{content: $fa-var-arrows}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-arrow-4-diag{
-		@include set-fa-icon($fa-var-arrows-alt);
+		@if(variable-exists(fa-var-arrows-alt)){
+			&:before{content: $fa-var-arrows-alt}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-extlink{
-		@include set-fa-icon($fa-var-external-link);
+		@if(variable-exists(fa-var-external-link)){
+			&:before{content: $fa-var-external-link}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-newwin{
-		@include set-fa-icon($fa-var-window-restore);
+		@if(variable-exists(fa-var-window-restore)){
+			&:before{content: $fa-var-window-restore}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-refresh{
-		@include set-fa-icon($fa-var-refresh);
+		@if(variable-exists(fa-var-refresh)){
+			&:before{content: $fa-var-refresh}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-shuffle{
-		@include set-fa-icon($fa-var-random);
+		@if(variable-exists(fa-var-random)){
+			&:before{content: $fa-var-random}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-transfer-e-w{
-		@include set-fa-icon($fa-var-exchange);
+		@if(variable-exists(fa-var-exchange)){
+			&:before{content: $fa-var-exchange}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-transferthick-e-w{
 
 	}
 	&.#{$jquery-ui-icon-prefix}-folder-collapsed{
-		@include set-fa-icon($fa-var-folder-o);
+		@if(variable-exists(fa-var-folder-o)){
+			&:before{content: $fa-var-folder-o}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-folder-open{
-		@include set-fa-icon($fa-var-folder-open-o);
+		@if(variable-exists(fa-var-folder-open-o)){
+			&:before{content: $fa-var-folder-open-o}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-document{
-		@include set-fa-icon($fa-var-file);
+		@if(variable-exists(fa-var-file)){
+			&:before{content: $fa-var-file}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-document-b{
-		@include set-fa-icon($fa-var-sticky-note-o);
+		@if(variable-exists(fa-var-sticky-note-o)){
+			&:before{content: $fa-var-sticky-note-o}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-note{
-		@include set-fa-icon($fa-var-book);
+		@if(variable-exists(fa-var-book)){
+			&:before{content: $fa-var-book}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-mail-closed{
-		@include set-fa-icon($fa-var-envelope-o);
+		@if(variable-exists(fa-var-envelope-o)){
+			&:before{content: $fa-var-envelope-o}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-mail-open{
-		@include set-fa-icon($fa-var-envelope-open-o);
+		@if(variable-exists(fa-var-envelope-open-o)){
+			&:before{content: $fa-var-envelope-open-o}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-suitcase{
-		@include set-fa-icon($fa-var-suitcase);
+		@if(variable-exists(fa-var-suitcase)){
+			&:before{content: $fa-var-suitcase}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-comment{
-		@include set-fa-icon($fa-var-commenting-o);
+		@if(variable-exists(fa-var-commenting-o)){
+			&:before{content: $fa-var-commenting-o}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-person{
-		@include set-fa-icon($fa-var-user);
+		@if(variable-exists(fa-var-user)){
+			&:before{content: $fa-var-user}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-print{
-		@include set-fa-icon($fa-var-print);
+		@if(variable-exists(fa-var-print)){
+			&:before{content: $fa-var-print}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-trash{
-		@include set-fa-icon($fa-var-trash);
+		@if(variable-exists(fa-var-trash)){
+			&:before{content: $fa-var-trash}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-locked{
-		@include set-fa-icon($fa-var-lock);
+		@if(variable-exists(fa-var-lock)){
+			&:before{content: $fa-var-lock}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-unlocked{
-		@include set-fa-icon($fa-var-unlock);
+		@if(variable-exists(fa-var-unlock)){
+			&:before{content: $fa-var-unlock}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-bookmark{
-		@include set-fa-icon($fa-var-bookmark);
+		@if(variable-exists(fa-var-bookmark)){
+			&:before{content: $fa-var-bookmark}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-tag{
-		@include set-fa-icon($fa-var-tag);
+		@if(variable-exists(fa-var-tag)){
+			&:before{content: $fa-var-tag}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-home{
-		@include set-fa-icon($fa-var-home);
+		@if(variable-exists(fa-var-home)){
+			&:before{content: $fa-var-home}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-flag{
-		@include set-fa-icon($fa-var-flag);
+		@if(variable-exists(fa-var-flag)){
+			&:before{content: $fa-var-flag}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-calculator{
-		@include set-fa-icon($fa-var-calculator);
+		@if(variable-exists(fa-var-calculator)){
+			&:before{content: $fa-var-calculator}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-cart{
-		@include set-fa-icon($fa-var-shopping-cart);
+		@if(variable-exists(fa-var-shopping-cart)){
+			&:before{content: $fa-var-shopping-cart}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-pencil{
-		@include set-fa-icon($fa-var-pencil);
+		@if(variable-exists(fa-var-pencil)){
+			&:before{content: $fa-var-pencil}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-clock{
-		@include set-fa-icon($fa-var-clock-o);
+		@if(variable-exists(fa-var-clock-o)){
+			&:before{content: $fa-var-clock-o}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-disk{
-		@include set-fa-icon($fa-var-floppy-o);
+		@if(variable-exists(fa-var-floppy-o)){
+			&:before{content: $fa-var-floppy-o}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-calendar{
-		@include set-fa-icon($fa-var-calendar);
+		@if(variable-exists(fa-var-calendar)){
+			&:before{content: $fa-var-calendar}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-zoomin{
-		@include set-fa-icon($fa-var-search-plus);
+		@if(variable-exists(fa-var-search-plus)){
+			&:before{content: $fa-var-search-plus}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-zoomout{
-		@include set-fa-icon($fa-var-search-minus);
+		@if(variable-exists(fa-var-search-minus)){
+			&:before{content: $fa-var-search-minus}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-search{
-		@include set-fa-icon($fa-var-search);
+		@if(variable-exists(fa-var-search)){
+			&:before{content: $fa-var-search}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-wrench{
-		@include set-fa-icon($fa-var-wrench);
+		@if(variable-exists(fa-var-wrench)){
+			&:before{content: $fa-var-wrench}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-gear{
-		@include set-fa-icon($fa-var-cog);
+		@if(variable-exists(fa-var-cog)){
+			&:before{content: $fa-var-cog}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-heart{
-		@include set-fa-icon($fa-var-heart);
+		@if(variable-exists(fa-var-heart)){
+			&:before{content: $fa-var-heart}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-star{
-		@include set-fa-icon($fa-var-star);
+		@if(variable-exists(fa-var-star)){
+			&:before{content: $fa-var-star}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-link{
-		@include set-fa-icon($fa-var-link);
+		@if(variable-exists(fa-var-link)){
+			&:before{content: $fa-var-link}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-cancel{
-		@include set-fa-icon($fa-var-ban);
+		@if(variable-exists(fa-var-ban)){
+			&:before{content: $fa-var-ban}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-plus{
-		@include set-fa-icon($fa-var-plus);
+		@if(variable-exists(fa-var-plus)){
+			&:before{content: $fa-var-plus}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-plusthick{
-		@include set-fa-icon($fa-var-plus);
+		@if(variable-exists(fa-var-plus)){
+			&:before{content: $fa-var-plus}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-minus{
-		@include set-fa-icon($fa-var-minus);
+		@if(variable-exists(fa-var-minus)){
+			&:before{content: $fa-var-minus}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-minusthick{
-		@include set-fa-icon($fa-var-minus);
+		@if(variable-exists(fa-var-minus)){
+			&:before{content: $fa-var-minus}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-close{
-		@include set-fa-icon($fa-var-close);
+		@if(variable-exists(fa-var-close)){
+			&:before{content: $fa-var-close}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-closethick{
-		@include set-fa-icon($fa-var-close);
+		@if(variable-exists(fa-var-close)){
+			&:before{content: $fa-var-close}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-key{
-		@include set-fa-icon($fa-var-key);
+		@if(variable-exists(fa-var-key)){
+			&:before{content: $fa-var-key}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-lightbulb{
-		@include set-fa-icon($fa-var-lightbulb-o);
+		@if(variable-exists(fa-var-lightbulb-o)){
+			&:before{content: $fa-var-lightbulb-o}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-scissors{
-		@include set-fa-icon($fa-var-scissors);
+		@if(variable-exists(fa-var-scissors)){
+			&:before{content: $fa-var-scissors}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-clipboard{
-		@include set-fa-icon($fa-var-clipboard);
+		@if(variable-exists(fa-var-clipboard)){
+			&:before{content: $fa-var-clipboard}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-copy{
-		@include set-fa-icon($fa-var-files-o);
+		@if(variable-exists(fa-var-files-o)){
+			&:before{content: $fa-var-files-o}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-contact{
-		@include set-fa-icon($fa-var-id-card-o);
+		@if(variable-exists(fa-var-id-card-o)){
+			&:before{content: $fa-var-id-card-o}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-image{
-		@include set-fa-icon($fa-var-picture-o);
+		@if(variable-exists(fa-var-picture-o)){
+			&:before{content: $fa-var-picture-o}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-video{
-		@include set-fa-icon($fa-var-video-camera);
+		@if(variable-exists(fa-var-video-camera)){
+			&:before{content: $fa-var-video-camera}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-script{
-		@include set-fa-icon($fa-var-file-code-o);
+		@if(variable-exists(fa-var-file-code-o)){
+			&:before{content: $fa-var-file-code-o}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-alert{
-		@include set-fa-icon($fa-var-exclamation-triangle);
+		@if(variable-exists(fa-var-exclamation-triangle)){
+			&:before{content: $fa-var-exclamation-triangle}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-info{
-		@include set-fa-icon($fa-var-info);
+		@if(variable-exists(fa-var-info)){
+			&:before{content: $fa-var-info}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-notice{
-		@include set-fa-icon($fa-var-exclamation);
+		@if(variable-exists(fa-var-exclamation)){
+			&:before{content: $fa-var-exclamation}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-help{
-		@include set-fa-icon($fa-var-question);
+		@if(variable-exists(fa-var-question)){
+			&:before{content: $fa-var-question}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-check{
-		@include set-fa-icon($fa-var-check);
+		@if(variable-exists(fa-var-check)){
+			&:before{content: $fa-var-check}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-bullet{
 
@@ -423,91 +562,149 @@ $jquery-ui-icon-prefix: ui-icon;
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-pin-s{
-		@include set-fa-icon($fa-var-thumb-tack);
+		@if(variable-exists(fa-var-thumb-tack)){
+			&:before{content: $fa-var-thumb-tack}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-play{
-		@include set-fa-icon($fa-var-play);
+		@if(variable-exists(fa-var-play)){
+			&:before{content: $fa-var-play}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-pause{
-		@include set-fa-icon($fa-var-pause);
+		@if(variable-exists(fa-var-pause)){
+			&:before{content: $fa-var-pause}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-seek-next{
-		@include set-fa-icon($fa-var-forward);
+		@if(variable-exists(fa-var-forward)){
+			&:before{content: $fa-var-forward}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-seek-prev{
-		@include set-fa-icon($fa-var-backward);
+		@if(variable-exists(fa-var-backward)){
+			&:before{content: $fa-var-backward}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-seek-end{
-		@include set-fa-icon($fa-var-step-forward);
+		@if(variable-exists(fa-var-step-forward)){
+			&:before{content: $fa-var-step-forward}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-seek-first{
-		@include set-fa-icon($fa-var-step-backward);
+		@if(variable-exists(fa-var-step-backward)){
+			&:before{content: $fa-var-step-backward}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-stop{
-		@include set-fa-icon($fa-var-stop);
+		@if(variable-exists(fa-var-stop)){
+			&:before{content: $fa-var-stop}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-eject{
-		@include set-fa-icon($fa-var-eject);
+		@if(variable-exists(fa-var-eject)){
+			&:before{content: $fa-var-eject}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-volume-off{
-		@include set-fa-icon($fa-var-volume-off);
+		@if(variable-exists(fa-var-volume-off)){
+			&:before{content: $fa-var-volume-off}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-volume-on{
-		@include set-fa-icon($fa-var-volume-up);
+		@if(variable-exists(fa-var-volume-up)){
+			&:before{content: $fa-var-volume-up}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-power{
-		@include set-fa-icon($fa-var-power-off);
+		@if(variable-exists(fa-var-power-off)){
+			&:before{content: $fa-var-power-off}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-signal-diag{
-		@include set-fa-icon($fa-var-rss);
+		@if(variable-exists(fa-var-rss)){
+			&:before{content: $fa-var-rss}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-signal{
-		@include set-fa-icon($fa-var-signal);//
+		@if(variable-exists(fa-var-signal)){
+			&:before{content: $fa-var-signal}
+		}//
 	}
 	&.#{$jquery-ui-icon-prefix}-battery-0{
-		@include set-fa-icon($fa-var-battery-empty);
+		@if(variable-exists(fa-var-battery-empty)){
+			&:before{content: $fa-var-battery-empty}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-battery-1{
-		@include set-fa-icon($fa-var-battery-quarter);
+		@if(variable-exists(fa-var-battery-quarter)){
+			&:before{content: $fa-var-battery-quarter}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-battery-2{
-		@include set-fa-icon($fa-var-battery-half);
+		@if(variable-exists(fa-var-battery-half)){
+			&:before{content: $fa-var-battery-half}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-battery-3{
-		@include set-fa-icon($fa-var-battery-full);
+		@if(variable-exists(fa-var-battery-full)){
+			&:before{content: $fa-var-battery-full}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-plus{
-		@include set-fa-icon($fa-var-plus-circle);
+		@if(variable-exists(fa-var-plus-circle)){
+			&:before{content: $fa-var-plus-circle}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-minus{
-		@include set-fa-icon($fa-var-minus-circle);
+		@if(variable-exists(fa-var-minus-circle)){
+			&:before{content: $fa-var-minus-circle}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-close{
-		@include set-fa-icon($fa-var-times-circle);
+		@if(variable-exists(fa-var-times-circle)){
+			&:before{content: $fa-var-times-circle}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-triangle-e{
-		@include set-fa-icon($fa-var-chevron-circle-right);
+		@if(variable-exists(fa-var-chevron-circle-right)){
+			&:before{content: $fa-var-chevron-circle-right}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-triangle-s{
-		@include set-fa-icon($fa-var-chevron-circle-down);
+		@if(variable-exists(fa-var-chevron-circle-down)){
+			&:before{content: $fa-var-chevron-circle-down}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-triangle-w{
-		@include set-fa-icon($fa-var-chevron-circle-left);
+		@if(variable-exists(fa-var-chevron-circle-left)){
+			&:before{content: $fa-var-chevron-circle-left}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-triangle-n{
-		@include set-fa-icon($fa-var-chevron-circle-up);
+		@if(variable-exists(fa-var-chevron-circle-up)){
+			&:before{content: $fa-var-chevron-circle-up}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-arrow-e{
-		@include set-fa-icon($fa-var-arrow-circle-riight);
+		@if(variable-exists(fa-var-arrow-circle-riight)){
+			&:before{content: $fa-var-arrow-circle-riight}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-arrow-s{
-		@include set-fa-icon($fa-var-arrow-circle-down);
+		@if(variable-exists(fa-var-arrow-circle-down)){
+			&:before{content: $fa-var-arrow-circle-down}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-arrow-w{
-		@include set-fa-icon($fa-var-arrow-circle-left);
+		@if(variable-exists(fa-var-arrow-circle-left)){
+			&:before{content: $fa-var-arrow-circle-left}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-arrow-n{
-		@include set-fa-icon($fa-var-arrow-circle-up);
+		@if(variable-exists(fa-var-arrow-circle-up)){
+			&:before{content: $fa-var-arrow-circle-up}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-zoomin{
 
@@ -516,25 +713,39 @@ $jquery-ui-icon-prefix: ui-icon;
 
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-check{
-		@include set-fa-icon($fa-var-check-circle);
+		@if(variable-exists(fa-var-check-circle)){
+			&:before{content: $fa-var-check-circle}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-circlesmall-plus{
-		@include set-fa-icon($fa-var-plus-square);
+		@if(variable-exists(fa-var-plus-square)){
+			&:before{content: $fa-var-plus-square}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-circlesmall-minus{
-		@include set-fa-icon($fa-var-minus-square);
+		@if(variable-exists(fa-var-minus-square)){
+			&:before{content: $fa-var-minus-square}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-circlesmall-close{
-		@include set-fa-icon($fa-var-window-close);
+		@if(variable-exists(fa-var-window-close)){
+			&:before{content: $fa-var-window-close}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-squaresmall-plus{
-		@include set-fa-icon($fa-var-plus-square);
+		@if(variable-exists(fa-var-plus-square)){
+			&:before{content: $fa-var-plus-square}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-squaresmall-minus{
-		@include set-fa-icon($fa-var-minus-square);
+		@if(variable-exists(fa-var-minus-square)){
+			&:before{content: $fa-var-minus-square}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-squaresmall-close{
-		@include set-fa-icon($fa-var-window-close);
+		@if(variable-exists(fa-var-window-close)){
+			&:before{content: $fa-var-window-close}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-grip-dotted-vertical{
 

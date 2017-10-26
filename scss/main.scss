@@ -18,6 +18,13 @@ $fa-font-path:"//netdna.bootstrapcdn.com/font-awesome/4.7.0/fonts";
 
 $jquery-ui-icon-prefix: ui-icon;
 
+/// 設定 Font Awesome Icon，避免缺乏變數造成的錯誤
+@mixin set-fa-icon($icon){
+	@if(variable-exists($icon)){
+		&:before{content: $icon}
+	}
+}
+
 .#{$jquery-ui-icon-prefix}{
 	@include fa-icon;
 	
@@ -25,25 +32,25 @@ $jquery-ui-icon-prefix: ui-icon;
 		&:before{content: ' '}
 	}
 	&.#{$jquery-ui-icon-prefix}-caret-1-n{
-		&:before{content: $fa-var-angle-up}
+		@include set-fa-icon($fa-var-angle-up);
 	}
 	&.#{$jquery-ui-icon-prefix}-caret-1-ne{
 
 	}
 	&.#{$jquery-ui-icon-prefix}-caret-1-e{
-		&:before{content: $fa-var-angle-right}
+		@include set-fa-icon($fa-var-angle-right);
 	}
 	&.#{$jquery-ui-icon-prefix}-caret-1-se{
 
 	}
 	&.#{$jquery-ui-icon-prefix}-caret-1-s{
-		&:before{content: $fa-var-angle-down}
+		@include set-fa-icon($fa-var-angle-down);
 	}
 	&.#{$jquery-ui-icon-prefix}-caret-1-sw{
 
 	}
 	&.#{$jquery-ui-icon-prefix}-caret-1-w{
-		&:before{content: $fa-var-angle-left}
+		@include set-fa-icon($fa-var-angle-left);
 	}
 	&.#{$jquery-ui-icon-prefix}-caret-1-nw{
 
@@ -55,25 +62,25 @@ $jquery-ui-icon-prefix: ui-icon;
 		&:before{content: '#{$fa-var-angle-left} #{$fa-var-angle-right}'}
 	}
 	&.#{$jquery-ui-icon-prefix}-triangle-1-n{
-		&:before{content: $fa-var-caret-up}
+		@include set-fa-icon($fa-var-caret-up);
 	}
 	&.#{$jquery-ui-icon-prefix}-triangle-1-ne{
 
 	}
 	&.#{$jquery-ui-icon-prefix}-triangle-1-e{
-		&:before{content: $fa-var-caret-right}
+		@include set-fa-icon($fa-var-caret-right);
 	}
 	&.#{$jquery-ui-icon-prefix}-triangle-1-se{
 
 	}
 	&.#{$jquery-ui-icon-prefix}-triangle-1-s{
-		&:before{content: $fa-var-caret-down}
+		@include set-fa-icon($fa-var-caret-down);
 	}
 	&.#{$jquery-ui-icon-prefix}-triangle-1-sw{
 
 	}
 	&.#{$jquery-ui-icon-prefix}-triangle-1-w{
-		&:before{content: $fa-var-caret-left}
+		@include set-fa-icon($fa-var-caret-left);
 	}
 	&.#{$jquery-ui-icon-prefix}-triangle-1-nw{
 		
@@ -85,25 +92,25 @@ $jquery-ui-icon-prefix: ui-icon;
 		&:before{content: '#{$fa-var-caret-left} #{$fa-var-caret-right}'}
 	}
 	&.#{$jquery-ui-icon-prefix}-arrow-1-n{
-		&:before{content: $fa-var-arrow-up}
+		@include set-fa-icon($fa-var-arrow-up);
 	}
 	&.#{$jquery-ui-icon-prefix}-arrow-1-ne{
 
 	}
 	&.#{$jquery-ui-icon-prefix}-arrow-1-e{
-		&:before{content: $fa-var-arrow-right}
+		@include set-fa-icon($fa-var-arrow-right);
 	}
 	&.#{$jquery-ui-icon-prefix}-arrow-1-se{
 
 	}
 	&.#{$jquery-ui-icon-prefix}-arrow-1-s{
-		&:before{content: $fa-var-arrow-down}
+		@include set-fa-icon($fa-var-arrow-down);
 	}
 	&.#{$jquery-ui-icon-prefix}-arrow-1-sw{
 
 	}
 	&.#{$jquery-ui-icon-prefix}-arrow-1-w{
-		&:before{content: $fa-var-arrow-left}
+		@include set-fa-icon($fa-var-arrow-left);
 	}
 	&.#{$jquery-ui-icon-prefix}-arrow-1-nw{
 
@@ -112,7 +119,7 @@ $jquery-ui-icon-prefix: ui-icon;
 
 	}
 	&.#{$jquery-ui-icon-prefix}-arrow-2-ne-sw{
- 		&:before{content: $fa-var-expand}
+ 		@include set-fa-icon($fa-var-expand);
 	}
 	&.#{$jquery-ui-icon-prefix}-arrow-2-e-w{
 		&:before{content: '#{$fa-var-arrow-left} #{$fa-var-arrow-right}'}
@@ -217,187 +224,187 @@ $jquery-ui-icon-prefix: ui-icon;
 
 	}
 	&.#{$jquery-ui-icon-prefix}-arrow-4{
-		&:before{content: $fa-var-arrows}
+		@include set-fa-icon($fa-var-arrows);
 	}
 	&.#{$jquery-ui-icon-prefix}-arrow-4-diag{
-		&:before{content: $fa-var-arrows-alt}
+		@include set-fa-icon($fa-var-arrows-alt);
 	}
 	&.#{$jquery-ui-icon-prefix}-extlink{
-		&:before{content: $fa-var-external-link}
+		@include set-fa-icon($fa-var-external-link);
 	}
 	&.#{$jquery-ui-icon-prefix}-newwin{
-		&:before{content: $fa-var-window-restore}
+		@include set-fa-icon($fa-var-window-restore);
 	}
 	&.#{$jquery-ui-icon-prefix}-refresh{
-		&:before{content: $fa-var-refresh}
+		@include set-fa-icon($fa-var-refresh);
 	}
 	&.#{$jquery-ui-icon-prefix}-shuffle{
-		&:before{content: $fa-var-random}
+		@include set-fa-icon($fa-var-random);
 	}
 	&.#{$jquery-ui-icon-prefix}-transfer-e-w{
-		&:before{content: $fa-var-exchange}
+		@include set-fa-icon($fa-var-exchange);
 	}
 	&.#{$jquery-ui-icon-prefix}-transferthick-e-w{
 
 	}
 	&.#{$jquery-ui-icon-prefix}-folder-collapsed{
-		&:before{content: $fa-var-folder-o}
+		@include set-fa-icon($fa-var-folder-o);
 	}
 	&.#{$jquery-ui-icon-prefix}-folder-open{
-		&:before{content: $fa-var-folder-open-o}
+		@include set-fa-icon($fa-var-folder-open-o);
 	}
 	&.#{$jquery-ui-icon-prefix}-document{
-		&:before{content: $fa-var-file}
+		@include set-fa-icon($fa-var-file);
 	}
 	&.#{$jquery-ui-icon-prefix}-document-b{
-		&:before{content: $fa-var-sticky-note-o}
+		@include set-fa-icon($fa-var-sticky-note-o);
 	}
 	&.#{$jquery-ui-icon-prefix}-note{
-		&:before{content: $fa-var-book}
+		@include set-fa-icon($fa-var-book);
 	}
 	&.#{$jquery-ui-icon-prefix}-mail-closed{
-		&:before{content: $fa-var-envelope-o}
+		@include set-fa-icon($fa-var-envelope-o);
 	}
 	&.#{$jquery-ui-icon-prefix}-mail-open{
-		&:before{content: $fa-var-envelope-open-o}
+		@include set-fa-icon($fa-var-envelope-open-o);
 	}
 	&.#{$jquery-ui-icon-prefix}-suitcase{
-		&:before{content: $fa-var-suitcase}
+		@include set-fa-icon($fa-var-suitcase);
 	}
 	&.#{$jquery-ui-icon-prefix}-comment{
-		&:before{content: $fa-var-commenting-o}
+		@include set-fa-icon($fa-var-commenting-o);
 	}
 	&.#{$jquery-ui-icon-prefix}-person{
-		&:before{content: $fa-var-user}
+		@include set-fa-icon($fa-var-user);
 	}
 	&.#{$jquery-ui-icon-prefix}-print{
-		&:before{content: $fa-var-print}
+		@include set-fa-icon($fa-var-print);
 	}
 	&.#{$jquery-ui-icon-prefix}-trash{
-		&:before{content: $fa-var-trash}
+		@include set-fa-icon($fa-var-trash);
 	}
 	&.#{$jquery-ui-icon-prefix}-locked{
-		&:before{content: $fa-var-lock}
+		@include set-fa-icon($fa-var-lock);
 	}
 	&.#{$jquery-ui-icon-prefix}-unlocked{
-		&:before{content: $fa-var-unlock}
+		@include set-fa-icon($fa-var-unlock);
 	}
 	&.#{$jquery-ui-icon-prefix}-bookmark{
-		&:before{content: $fa-var-bookmark}
+		@include set-fa-icon($fa-var-bookmark);
 	}
 	&.#{$jquery-ui-icon-prefix}-tag{
-		&:before{content: $fa-var-tag}
+		@include set-fa-icon($fa-var-tag);
 	}
 	&.#{$jquery-ui-icon-prefix}-home{
-		&:before{content: $fa-var-home}
+		@include set-fa-icon($fa-var-home);
 	}
 	&.#{$jquery-ui-icon-prefix}-flag{
-		&:before{content: $fa-var-flag}
+		@include set-fa-icon($fa-var-flag);
 	}
 	&.#{$jquery-ui-icon-prefix}-calculator{
-		&:before{content: $fa-var-calculator}
+		@include set-fa-icon($fa-var-calculator);
 	}
 	&.#{$jquery-ui-icon-prefix}-cart{
-		&:before{content: $fa-var-shopping-cart}
+		@include set-fa-icon($fa-var-shopping-cart);
 	}
 	&.#{$jquery-ui-icon-prefix}-pencil{
-		&:before{content: $fa-var-pencil}
+		@include set-fa-icon($fa-var-pencil);
 	}
 	&.#{$jquery-ui-icon-prefix}-clock{
-		&:before{content: $fa-var-clock-o}
+		@include set-fa-icon($fa-var-clock-o);
 	}
 	&.#{$jquery-ui-icon-prefix}-disk{
-		&:before{content: $fa-var-floppy-o}
+		@include set-fa-icon($fa-var-floppy-o);
 	}
 	&.#{$jquery-ui-icon-prefix}-calendar{
-		&:before{content: $fa-var-calendar}
+		@include set-fa-icon($fa-var-calendar);
 	}
 	&.#{$jquery-ui-icon-prefix}-zoomin{
-		&:before{content: $fa-var-search-plus}
+		@include set-fa-icon($fa-var-search-plus);
 	}
 	&.#{$jquery-ui-icon-prefix}-zoomout{
-		&:before{content: $fa-var-search-minus}
+		@include set-fa-icon($fa-var-search-minus);
 	}
 	&.#{$jquery-ui-icon-prefix}-search{
-		&:before{content: $fa-var-search}
+		@include set-fa-icon($fa-var-search);
 	}
 	&.#{$jquery-ui-icon-prefix}-wrench{
-		&:before{content: $fa-var-wrench}
+		@include set-fa-icon($fa-var-wrench);
 	}
 	&.#{$jquery-ui-icon-prefix}-gear{
-		&:before{content: $fa-var-cog}
+		@include set-fa-icon($fa-var-cog);
 	}
 	&.#{$jquery-ui-icon-prefix}-heart{
-		&:before{content: $fa-var-heart}
+		@include set-fa-icon($fa-var-heart);
 	}
 	&.#{$jquery-ui-icon-prefix}-star{
-		&:before{content: $fa-var-star}
+		@include set-fa-icon($fa-var-star);
 	}
 	&.#{$jquery-ui-icon-prefix}-link{
-		&:before{content: $fa-var-link}
+		@include set-fa-icon($fa-var-link);
 	}
 	&.#{$jquery-ui-icon-prefix}-cancel{
-		&:before{content: $fa-var-ban}
+		@include set-fa-icon($fa-var-ban);
 	}
 	&.#{$jquery-ui-icon-prefix}-plus{
-		&:before{content: $fa-var-plus}
+		@include set-fa-icon($fa-var-plus);
 	}
 	&.#{$jquery-ui-icon-prefix}-plusthick{
-		&:before{content: $fa-var-plus}
+		@include set-fa-icon($fa-var-plus);
 	}
 	&.#{$jquery-ui-icon-prefix}-minus{
-		&:before{content: $fa-var-minus}
+		@include set-fa-icon($fa-var-minus);
 	}
 	&.#{$jquery-ui-icon-prefix}-minusthick{
-		&:before{content: $fa-var-minus}
+		@include set-fa-icon($fa-var-minus);
 	}
 	&.#{$jquery-ui-icon-prefix}-close{
-		&:before{content: $fa-var-close}
+		@include set-fa-icon($fa-var-close);
 	}
 	&.#{$jquery-ui-icon-prefix}-closethick{
-		&:before{content: $fa-var-close}
+		@include set-fa-icon($fa-var-close);
 	}
 	&.#{$jquery-ui-icon-prefix}-key{
-		&:before{content: $fa-var-key}
+		@include set-fa-icon($fa-var-key);
 	}
 	&.#{$jquery-ui-icon-prefix}-lightbulb{
-		&:before{content: $fa-var-lightbulb-o}
+		@include set-fa-icon($fa-var-lightbulb-o);
 	}
 	&.#{$jquery-ui-icon-prefix}-scissors{
-		&:before{content: $fa-var-scissors}
+		@include set-fa-icon($fa-var-scissors);
 	}
 	&.#{$jquery-ui-icon-prefix}-clipboard{
-		&:before{content: $fa-var-clipboard}
+		@include set-fa-icon($fa-var-clipboard);
 	}
 	&.#{$jquery-ui-icon-prefix}-copy{
-		&:before{content: $fa-var-files-o}
+		@include set-fa-icon($fa-var-files-o);
 	}
 	&.#{$jquery-ui-icon-prefix}-contact{
-		&:before{content: $fa-var-id-card-o}
+		@include set-fa-icon($fa-var-id-card-o);
 	}
 	&.#{$jquery-ui-icon-prefix}-image{
-		&:before{content: $fa-var-picture-o}
+		@include set-fa-icon($fa-var-picture-o);
 	}
 	&.#{$jquery-ui-icon-prefix}-video{
-		&:before{content: $fa-var-video-camera}
+		@include set-fa-icon($fa-var-video-camera);
 	}
 	&.#{$jquery-ui-icon-prefix}-script{
-		&:before{content: $fa-var-file-code-o}
+		@include set-fa-icon($fa-var-file-code-o);
 	}
 	&.#{$jquery-ui-icon-prefix}-alert{
-		&:before{content: $fa-var-exclamation-triangle}
+		@include set-fa-icon($fa-var-exclamation-triangle);
 	}
 	&.#{$jquery-ui-icon-prefix}-info{
-		&:before{content: $fa-var-info}
+		@include set-fa-icon($fa-var-info);
 	}
 	&.#{$jquery-ui-icon-prefix}-notice{
-		&:before{content: $fa-var-exclamation}
+		@include set-fa-icon($fa-var-exclamation);
 	}
 	&.#{$jquery-ui-icon-prefix}-help{
-		&:before{content: $fa-var-question}
+		@include set-fa-icon($fa-var-question);
 	}
 	&.#{$jquery-ui-icon-prefix}-check{
-		&:before{content: $fa-var-check}
+		@include set-fa-icon($fa-var-check);
 	}
 	&.#{$jquery-ui-icon-prefix}-bullet{
 
@@ -416,91 +423,91 @@ $jquery-ui-icon-prefix: ui-icon;
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-pin-s{
-		&:before{content: $fa-var-thumb-tack}
+		@include set-fa-icon($fa-var-thumb-tack);
 	}
 	&.#{$jquery-ui-icon-prefix}-play{
-		&:before{content: $fa-var-play}
+		@include set-fa-icon($fa-var-play);
 	}
 	&.#{$jquery-ui-icon-prefix}-pause{
-		&:before{content: $fa-var-pause}
+		@include set-fa-icon($fa-var-pause);
 	}
 	&.#{$jquery-ui-icon-prefix}-seek-next{
-		&:before{content: $fa-var-forward}
+		@include set-fa-icon($fa-var-forward);
 	}
 	&.#{$jquery-ui-icon-prefix}-seek-prev{
-		&:before{content: $fa-var-backward}
+		@include set-fa-icon($fa-var-backward);
 	}
 	&.#{$jquery-ui-icon-prefix}-seek-end{
-		&:before{content: $fa-var-step-forward}
+		@include set-fa-icon($fa-var-step-forward);
 	}
 	&.#{$jquery-ui-icon-prefix}-seek-first{
-		&:before{content: $fa-var-step-backward}
+		@include set-fa-icon($fa-var-step-backward);
 	}
 	&.#{$jquery-ui-icon-prefix}-stop{
-		&:before{content: $fa-var-stop}
+		@include set-fa-icon($fa-var-stop);
 	}
 	&.#{$jquery-ui-icon-prefix}-eject{
-		&:before{content: $fa-var-eject}
+		@include set-fa-icon($fa-var-eject);
 	}
 	&.#{$jquery-ui-icon-prefix}-volume-off{
-		&:before{content: $fa-var-volume-off}
+		@include set-fa-icon($fa-var-volume-off);
 	}
 	&.#{$jquery-ui-icon-prefix}-volume-on{
-		&:before{content: $fa-var-volume-up}
+		@include set-fa-icon($fa-var-volume-up);
 	}
 	&.#{$jquery-ui-icon-prefix}-power{
-		&:before{content: $fa-var-power-off}
+		@include set-fa-icon($fa-var-power-off);
 	}
 	&.#{$jquery-ui-icon-prefix}-signal-diag{
-		&:before{content: $fa-var-rss}
+		@include set-fa-icon($fa-var-rss);
 	}
 	&.#{$jquery-ui-icon-prefix}-signal{
-		&:before{content: $fa-var-signal}//
+		@include set-fa-icon($fa-var-signal);//
 	}
 	&.#{$jquery-ui-icon-prefix}-battery-0{
-		&:before{content: $fa-var-battery-empty}
+		@include set-fa-icon($fa-var-battery-empty);
 	}
 	&.#{$jquery-ui-icon-prefix}-battery-1{
-		&:before{content: $fa-var-battery-quarter}
+		@include set-fa-icon($fa-var-battery-quarter);
 	}
 	&.#{$jquery-ui-icon-prefix}-battery-2{
-		&:before{content: $fa-var-battery-half}
+		@include set-fa-icon($fa-var-battery-half);
 	}
 	&.#{$jquery-ui-icon-prefix}-battery-3{
-		&:before{content: $fa-var-battery-full}
+		@include set-fa-icon($fa-var-battery-full);
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-plus{
-		&:before{content: $fa-var-plus-circle}
+		@include set-fa-icon($fa-var-plus-circle);
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-minus{
-		&:before{content: $fa-var-minus-circle}
+		@include set-fa-icon($fa-var-minus-circle);
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-close{
-		&:before{content: $fa-var-times-circle}
+		@include set-fa-icon($fa-var-times-circle);
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-triangle-e{
-		&:before{content: $fa-var-chevron-circle-right}
+		@include set-fa-icon($fa-var-chevron-circle-right);
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-triangle-s{
-		&:before{content: $fa-var-chevron-circle-down}
+		@include set-fa-icon($fa-var-chevron-circle-down);
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-triangle-w{
-		&:before{content: $fa-var-chevron-circle-left}
+		@include set-fa-icon($fa-var-chevron-circle-left);
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-triangle-n{
-		&:before{content: $fa-var-chevron-circle-up}
+		@include set-fa-icon($fa-var-chevron-circle-up);
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-arrow-e{
-		&:before{content: $fa-var-arrow-circle-riight}
+		@include set-fa-icon($fa-var-arrow-circle-riight);
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-arrow-s{
-		&:before{content: $fa-var-arrow-circle-down}
+		@include set-fa-icon($fa-var-arrow-circle-down);
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-arrow-w{
-		&:before{content: $fa-var-arrow-circle-left}
+		@include set-fa-icon($fa-var-arrow-circle-left);
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-arrow-n{
-		&:before{content: $fa-var-arrow-circle-up}
+		@include set-fa-icon($fa-var-arrow-circle-up);
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-zoomin{
 
@@ -509,25 +516,25 @@ $jquery-ui-icon-prefix: ui-icon;
 
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-check{
-		&:before{content: $fa-var-check-circle}
+		@include set-fa-icon($fa-var-check-circle);
 	}
 	&.#{$jquery-ui-icon-prefix}-circlesmall-plus{
-		&:before{content: $fa-var-plus-square}
+		@include set-fa-icon($fa-var-plus-square);
 	}
 	&.#{$jquery-ui-icon-prefix}-circlesmall-minus{
-		&:before{content: $fa-var-minus-square}
+		@include set-fa-icon($fa-var-minus-square);
 	}
 	&.#{$jquery-ui-icon-prefix}-circlesmall-close{
-		&:before{content: $fa-var-window-close}
+		@include set-fa-icon($fa-var-window-close);
 	}
 	&.#{$jquery-ui-icon-prefix}-squaresmall-plus{
-		&:before{content: $fa-var-plus-square}
+		@include set-fa-icon($fa-var-plus-square);
 	}
 	&.#{$jquery-ui-icon-prefix}-squaresmall-minus{
-		&:before{content: $fa-var-minus-square}
+		@include set-fa-icon($fa-var-minus-square);
 	}
 	&.#{$jquery-ui-icon-prefix}-squaresmall-close{
-		&:before{content: $fa-var-window-close}
+		@include set-fa-icon($fa-var-window-close);
 	}
 	&.#{$jquery-ui-icon-prefix}-grip-dotted-vertical{
 

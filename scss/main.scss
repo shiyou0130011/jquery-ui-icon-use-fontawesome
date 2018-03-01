@@ -555,15 +555,21 @@ $jquery-ui-icon-prefix: ui-icon;
 
 	}
 	&.#{$jquery-ui-icon-prefix}-pin-w{
+		@if(variable-exists(fa-var-thumb-tack)){
+			&:before{content: $fa-var-thumb-tack}
+		}@else if(variable-exists(fa-var-thumbtack)){
+			&:before{content: $fa-var-thumbtack}
+		}
 		&:before{
-			content: $fa-var-thumb-tack;
 			filter: none;
-			@include fa-icon-rotate(90deg, 1); 
+			@include fa-icon-rotate(90deg, 1);
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-pin-s{
 		@if(variable-exists(fa-var-thumb-tack)){
 			&:before{content: $fa-var-thumb-tack}
+		}@else if(variable-exists(fa-var-thumbtack)){
+			&:before{content: $fa-var-thumbtack}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-play{

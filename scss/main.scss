@@ -1,7 +1,7 @@
 @import "../fontawesome/assets/stylesheets/font-awesome/variables";
 
-// use the font from Bootstrap CDN font files directly
-$fa-font-path:"//netdna.bootstrapcdn.com/font-awesome/4.7.0/fonts"; 
+// TODO set font’s path
+// $fa-font-path: ""; 
 
 @import "../fontawesome/assets/stylesheets/font-awesome/mixins";
 @import "../fontawesome/assets/stylesheets/font-awesome/path";
@@ -25,6 +25,7 @@ $jquery-ui-icon-prefix: ui-icon;
 		&:before{content: ' '}
 	}
 	&.#{$jquery-ui-icon-prefix}-caret-1-n{
+		@extend .fas;
 		@if(variable-exists(fa-var-angle-up)){
 			&:before{content: $fa-var-angle-up}
 		}
@@ -33,6 +34,7 @@ $jquery-ui-icon-prefix: ui-icon;
 
 	}
 	&.#{$jquery-ui-icon-prefix}-caret-1-e{
+		@extend .fas;
 		@if(variable-exists(fa-var-angle-right)){
 			&:before{content: $fa-var-angle-right}
 		}
@@ -41,6 +43,7 @@ $jquery-ui-icon-prefix: ui-icon;
 
 	}
 	&.#{$jquery-ui-icon-prefix}-caret-1-s{
+		@extend .fas;
 		@if(variable-exists(fa-var-angle-down)){
 			&:before{content: $fa-var-angle-down}
 		}
@@ -49,6 +52,7 @@ $jquery-ui-icon-prefix: ui-icon;
 
 	}
 	&.#{$jquery-ui-icon-prefix}-caret-1-w{
+		@extend .fas;
 		@if(variable-exists(fa-var-angle-left)){
 			&:before{content: $fa-var-angle-left}
 		}
@@ -60,9 +64,11 @@ $jquery-ui-icon-prefix: ui-icon;
 
 	}
 	&.#{$jquery-ui-icon-prefix}-caret-2-e-w{
+		@extend .fas;
 		&:before{content: '#{$fa-var-angle-left} #{$fa-var-angle-right}'}
 	}
 	&.#{$jquery-ui-icon-prefix}-triangle-1-n{
+		@extend .fas;
 		@if(variable-exists(fa-var-caret-up)){
 			&:before{content: $fa-var-caret-up}
 		}
@@ -71,6 +77,7 @@ $jquery-ui-icon-prefix: ui-icon;
 
 	}
 	&.#{$jquery-ui-icon-prefix}-triangle-1-e{
+		@extend .fas;
 		@if(variable-exists(fa-var-caret-right)){
 			&:before{content: $fa-var-caret-right}
 		}
@@ -79,6 +86,7 @@ $jquery-ui-icon-prefix: ui-icon;
 
 	}
 	&.#{$jquery-ui-icon-prefix}-triangle-1-s{
+		@extend .fas;
 		@if(variable-exists(fa-var-caret-down)){
 			&:before{content: $fa-var-caret-down}
 		}
@@ -87,6 +95,7 @@ $jquery-ui-icon-prefix: ui-icon;
 
 	}
 	&.#{$jquery-ui-icon-prefix}-triangle-1-w{
+		@extend .fas;
 		@if(variable-exists(fa-var-caret-left)){
 			&:before{content: $fa-var-caret-left}
 		}
@@ -98,9 +107,11 @@ $jquery-ui-icon-prefix: ui-icon;
 
 	}
 	&.#{$jquery-ui-icon-prefix}-triangle-2-e-w{
+		@extend .fas;
 		&:before{content: '#{$fa-var-caret-left} #{$fa-var-caret-right}'}
 	}
 	&.#{$jquery-ui-icon-prefix}-arrow-1-n{
+		@extend .fas;
 		@if(variable-exists(fa-var-arrow-up)){
 			&:before{content: $fa-var-arrow-up}
 		}
@@ -109,6 +120,7 @@ $jquery-ui-icon-prefix: ui-icon;
 
 	}
 	&.#{$jquery-ui-icon-prefix}-arrow-1-e{
+		@extend .fas;
 		@if(variable-exists(fa-var-arrow-right)){
 			&:before{content: $fa-var-arrow-right}
 		}
@@ -117,6 +129,7 @@ $jquery-ui-icon-prefix: ui-icon;
 
 	}
 	&.#{$jquery-ui-icon-prefix}-arrow-1-s{
+		@extend .fas;
 		@if(variable-exists(fa-var-arrow-down)){
 			&:before{content: $fa-var-arrow-down}
 		}
@@ -125,6 +138,7 @@ $jquery-ui-icon-prefix: ui-icon;
 
 	}
 	&.#{$jquery-ui-icon-prefix}-arrow-1-w{
+		@extend .fas;
 		@if(variable-exists(fa-var-arrow-left)){
 			&:before{content: $fa-var-arrow-left}
 		}
@@ -136,11 +150,12 @@ $jquery-ui-icon-prefix: ui-icon;
 
 	}
 	&.#{$jquery-ui-icon-prefix}-arrow-2-ne-sw{
- 		@if(variable-exists(fa-var-expand)){
-			&:before{content: $fa-var-expand}
+ 		@if(variable-exists(fa-var-expand-alt)){
+			&:before{content: $fa-var-expand-alt}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-arrow-2-e-w{
+		@extend .fas;
 		&:before{content: '#{$fa-var-arrow-left} #{$fa-var-arrow-right}'}
 	}
 	&.#{$jquery-ui-icon-prefix}-arrow-2-se-nw{
@@ -248,32 +263,46 @@ $jquery-ui-icon-prefix: ui-icon;
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-arrow-4-diag{
+		@extend .fas;
 		@if(variable-exists(fa-var-arrows-alt)){
 			&:before{content: $fa-var-arrows-alt}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-extlink{
+		@extend .fas;
 		@if(variable-exists(fa-var-external-link)){
 			&:before{content: $fa-var-external-link}
+		}@else if(variable-exists(fa-var-external-link-alt)){
+			&:before{content: $fa-var-external-link-alt}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-newwin{
+		@extend .far;
 		@if(variable-exists(fa-var-window-restore)){
 			&:before{content: $fa-var-window-restore}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-refresh{
+		@extend .fas;
 		@if(variable-exists(fa-var-refresh)){
 			&:before{content: $fa-var-refresh}
+		}@else if(variable-exists(fa-sync-alt)){
+			&:before{content: $fa-sync-alt}
+		}@else if(variable-exists(fa-sync)){
+			&:before{content: $fa-sync}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-shuffle{
+		@extend .fas;
 		@if(variable-exists(fa-var-random)){
 			&:before{content: $fa-var-random}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-transfer-e-w{
+		@extend .fas;
 		@if(variable-exists(fa-var-exchange)){
+			&:before{content: $fa-var-exchange}
+		}@else if(variable-exists(fa-var-exchange)){
 			&:before{content: $fa-var-exchange}
 		}
 	}
@@ -281,280 +310,383 @@ $jquery-ui-icon-prefix: ui-icon;
 
 	}
 	&.#{$jquery-ui-icon-prefix}-folder-collapsed{
+		@extend .fas;
 		@if(variable-exists(fa-var-folder-o)){
 			&:before{content: $fa-var-folder-o}
+		}@else if(variable-exists(fa-var-folder)){
+			&:before{content: $fa-var-folder}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-folder-open{
+		@extend .fas;
 		@if(variable-exists(fa-var-folder-open-o)){
 			&:before{content: $fa-var-folder-open-o}
+		}@else if(variable-exists(fa-var-folder-open)){
+			&:before{content: $fa-var-folder-open}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-document{
-		@if(variable-exists(fa-var-file)){
+		@extend .fas;
+		@if(variable-exists(fa-var-file-alt)){
+			&:before{content: $fa-var-file-alt}
+		}@else if(variable-exists(fa-var-file)){
 			&:before{content: $fa-var-file}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-document-b{
+		@extend .fas;
 		@if(variable-exists(fa-var-sticky-note-o)){
 			&:before{content: $fa-var-sticky-note-o}
+		}@else if(variable-exists(fa-var-sticky-note)){
+			&:before{content: $fa-var-sticky-note}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-note{
+		@extend .fas;
 		@if(variable-exists(fa-var-book)){
 			&:before{content: $fa-var-book}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-mail-closed{
+		@extend .far;
 		@if(variable-exists(fa-var-envelope-o)){
 			&:before{content: $fa-var-envelope-o}
+		}@else if(variable-exists(fa-var-envelope)){
+			&:before{content: $fa-var-envelope}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-mail-open{
+		@extend .far;
 		@if(variable-exists(fa-var-envelope-open-o)){
 			&:before{content: $fa-var-envelope-open-o}
+		}@else if(variable-exists(fa-var-envelope-open)){
+			&:before{content: $fa-var-envelope-open}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-suitcase{
+		@extend .fas;
 		@if(variable-exists(fa-var-suitcase)){
 			&:before{content: $fa-var-suitcase}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-comment{
+		@extend .far;
 		@if(variable-exists(fa-var-commenting-o)){
 			&:before{content: $fa-var-commenting-o}
+		}@else if(variable-exists(fa-var-commenting)){
+			&:before{content: $fa-var-commenting}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-person{
+		@extend .fas;
 		@if(variable-exists(fa-var-user)){
 			&:before{content: $fa-var-user}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-print{
+		@extend .fas;
 		@if(variable-exists(fa-var-print)){
 			&:before{content: $fa-var-print}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-trash{
-		@if(variable-exists(fa-var-trash)){
+		@extend .fas;
+		@if(variable-exists(fa-var-trash-alt)){
+			&:before{content: $fa-var-trash-alt}
+		}@else if(variable-exists(fa-var-trash)){
 			&:before{content: $fa-var-trash}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-locked{
-		@if(variable-exists(fa-var-lock)){
+		@extend .fas;
+		@if(variable-exists(fa-var-lock-alt)){
+			&:before{content: $fa-var-lock-alt}
+		}@else if(variable-exists(fa-var-lock)){
 			&:before{content: $fa-var-lock}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-unlocked{
-		@if(variable-exists(fa-var-unlock)){
+		@extend .fas;
+		@if(variable-exists(fa-var-unlock-alt)){
+			&:before{content: $fa-var-unlock-alt}
+		}@else if(variable-exists(fa-var-unlock)){
 			&:before{content: $fa-var-unlock}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-bookmark{
+		@extend .fas;
 		@if(variable-exists(fa-var-bookmark)){
 			&:before{content: $fa-var-bookmark}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-tag{
-		@if(variable-exists(fa-var-tag)){
+		@extend .fas;
+		@if(variable-exists(fa-var-tags)){
+			&:before{content: $fa-var-tags}
+		}@else if(variable-exists(fa-var-tag)){
 			&:before{content: $fa-var-tag}
 		}
+		
 	}
 	&.#{$jquery-ui-icon-prefix}-home{
+		@extend .fas;
 		@if(variable-exists(fa-var-home)){
 			&:before{content: $fa-var-home}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-flag{
+		@extend .fas;
 		@if(variable-exists(fa-var-flag)){
 			&:before{content: $fa-var-flag}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-calculator{
+		@extend .fas;
 		@if(variable-exists(fa-var-calculator)){
 			&:before{content: $fa-var-calculator}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-cart{
+		@extend .fas;
 		@if(variable-exists(fa-var-shopping-cart)){
 			&:before{content: $fa-var-shopping-cart}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-pencil{
+		@extend .fas;
 		@if(variable-exists(fa-var-pencil)){
 			&:before{content: $fa-var-pencil}
+		}@else if(variable-exists(fa-var-pencil-alt)){
+			&:before{content: $fa-var-pencil-alt}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-clock{
+		@extend .far;
 		@if(variable-exists(fa-var-clock-o)){
 			&:before{content: $fa-var-clock-o}
+		}@else if(variable-exists(fa-var-clock)){
+			&:before{content: $fa-var-clock}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-disk{
+		@extend .far;
 		@if(variable-exists(fa-var-floppy-o)){
 			&:before{content: $fa-var-floppy-o}
+		}@else if(variable-exists(fa-var-save)){
+			&:before{content: $fa-var-save}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-calendar{
+		@extend .far;
 		@if(variable-exists(fa-var-calendar)){
 			&:before{content: $fa-var-calendar}
+		}@else if(variable-exists(fa-var-calendar-alt)){
+			&:before{content: $fa-var-calendar-alt}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-zoomin{
+		@extend .fas;
 		@if(variable-exists(fa-var-search-plus)){
 			&:before{content: $fa-var-search-plus}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-zoomout{
+		@extend .fas;
 		@if(variable-exists(fa-var-search-minus)){
 			&:before{content: $fa-var-search-minus}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-search{
+		@extend .fas;
 		@if(variable-exists(fa-var-search)){
 			&:before{content: $fa-var-search}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-wrench{
+		@extend .fas;
 		@if(variable-exists(fa-var-wrench)){
 			&:before{content: $fa-var-wrench}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-gear{
+		@extend .fas;
 		@if(variable-exists(fa-var-cog)){
 			&:before{content: $fa-var-cog}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-heart{
+		@extend .fas;
 		@if(variable-exists(fa-var-heart)){
 			&:before{content: $fa-var-heart}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-star{
+		@extend .fas;
 		@if(variable-exists(fa-var-star)){
 			&:before{content: $fa-var-star}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-link{
+		@extend .fas;
 		@if(variable-exists(fa-var-link)){
 			&:before{content: $fa-var-link}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-cancel{
+		@extend .fas;
 		@if(variable-exists(fa-var-ban)){
 			&:before{content: $fa-var-ban}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-plus{
+		@extend .fas;
 		@if(variable-exists(fa-var-plus)){
 			&:before{content: $fa-var-plus}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-plusthick{
+		@extend .far;
 		@if(variable-exists(fa-var-plus)){
 			&:before{content: $fa-var-plus}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-minus{
+		@extend .fas;
 		@if(variable-exists(fa-var-minus)){
 			&:before{content: $fa-var-minus}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-minusthick{
+		@extend .far;
 		@if(variable-exists(fa-var-minus)){
 			&:before{content: $fa-var-minus}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-close{
+		@extend .fas;
 		@if(variable-exists(fa-var-close)){
 			&:before{content: $fa-var-close}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-closethick{
+		@extend .far;
 		@if(variable-exists(fa-var-close)){
 			&:before{content: $fa-var-close}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-key{
+		@extend .fas;
 		@if(variable-exists(fa-var-key)){
 			&:before{content: $fa-var-key}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-lightbulb{
+		@extend .fas;
 		@if(variable-exists(fa-var-lightbulb-o)){
 			&:before{content: $fa-var-lightbulb-o}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-scissors{
+		@extend .fas;
 		@if(variable-exists(fa-var-scissors)){
 			&:before{content: $fa-var-scissors}
+		}@else if(variable-exists(fa-var-cut)){
+			&:before{content: $fa-var-cut}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-clipboard{
+		@extend .far;
 		@if(variable-exists(fa-var-clipboard)){
 			&:before{content: $fa-var-clipboard}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-copy{
-		@if(variable-exists(fa-var-files-o)){
+		@extend .far;
+		@if(variable-exists(fa-var-copy)){
+			&:before{content: $fa-var-copy}
+		}@else if(variable-exists(fa-var-files-o)){
 			&:before{content: $fa-var-files-o}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-contact{
+		@extend .far;
 		@if(variable-exists(fa-var-id-card-o)){
 			&:before{content: $fa-var-id-card-o}
+		}@if(variable-exists(fa-var-address-card)){
+			&:before{content: $fa-var-address-card}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-image{
+		@extend .far;
 		@if(variable-exists(fa-var-picture-o)){
 			&:before{content: $fa-var-picture-o}
+		}@else if(variable-exists(fa-var-image)){
+			&:before{content: $fa-var-image}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-video{
-		@if(variable-exists(fa-var-video-camera)){
+		@extend .fas;
+		@if(variable-exists(fa-var-film)){
+			&:before{content: $fa-var-film}
+		}@else if(variable-exists(fa-var-video-camera)){
 			&:before{content: $fa-var-video-camera}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-script{
+		@extend .far;
 		@if(variable-exists(fa-var-file-code-o)){
 			&:before{content: $fa-var-file-code-o}
+		}@else if(variable-exists(fa-var-file-code)){
+			&:before{content: $fa-var-file-code}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-alert{
+		@extend .fas;
 		@if(variable-exists(fa-var-exclamation-triangle)){
 			&:before{content: $fa-var-exclamation-triangle}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-info{
+		@extend .fas;
 		@if(variable-exists(fa-var-info)){
 			&:before{content: $fa-var-info}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-notice{
+		@extend .fas;
 		@if(variable-exists(fa-var-exclamation)){
 			&:before{content: $fa-var-exclamation}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-help{
+		@extend .fas;
 		@if(variable-exists(fa-var-question)){
 			&:before{content: $fa-var-question}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-check{
+		@extend .fas;
 		@if(variable-exists(fa-var-check)){
 			&:before{content: $fa-var-check}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-bullet{
-
+		@extend .fas;
+		@if(variable-exists(fa-var-circle)){
+			&:before{content: $fa-var-circle}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-radio-off{
-
+		@extend .far;
+		@if(variable-exists(fa-var-circle)){
+			&:before{content: $fa-var-circle}
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-radio-on{
 
 	}
 	&.#{$jquery-ui-icon-prefix}-pin-w{
+		@extend .fas;
 		@if(variable-exists(fa-var-thumb-tack)){
 			&:before{content: $fa-var-thumb-tack}
 		}@else if(variable-exists(fa-var-thumbtack)){
@@ -566,6 +698,7 @@ $jquery-ui-icon-prefix: ui-icon;
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-pin-s{
+		@extend .fas;
 		@if(variable-exists(fa-var-thumb-tack)){
 			&:before{content: $fa-var-thumb-tack}
 		}@else if(variable-exists(fa-var-thumbtack)){
@@ -573,141 +706,171 @@ $jquery-ui-icon-prefix: ui-icon;
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-play{
+		@extend .fas;
 		@if(variable-exists(fa-var-play)){
 			&:before{content: $fa-var-play}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-pause{
+		@extend .fas;
 		@if(variable-exists(fa-var-pause)){
 			&:before{content: $fa-var-pause}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-seek-next{
+		@extend .fas;
 		@if(variable-exists(fa-var-forward)){
 			&:before{content: $fa-var-forward}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-seek-prev{
+		@extend .fas;
 		@if(variable-exists(fa-var-backward)){
 			&:before{content: $fa-var-backward}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-seek-end{
+		@extend .fas;
 		@if(variable-exists(fa-var-step-forward)){
 			&:before{content: $fa-var-step-forward}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-seek-first{
+		@extend .fas;
 		@if(variable-exists(fa-var-step-backward)){
 			&:before{content: $fa-var-step-backward}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-stop{
+		@extend .fas;
 		@if(variable-exists(fa-var-stop)){
 			&:before{content: $fa-var-stop}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-eject{
+		@extend .fas;
 		@if(variable-exists(fa-var-eject)){
 			&:before{content: $fa-var-eject}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-volume-off{
+		@extend .fas;
 		@if(variable-exists(fa-var-volume-off)){
 			&:before{content: $fa-var-volume-off}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-volume-on{
+		@extend .fas;
 		@if(variable-exists(fa-var-volume-up)){
 			&:before{content: $fa-var-volume-up}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-power{
+		@extend .fas;
 		@if(variable-exists(fa-var-power-off)){
 			&:before{content: $fa-var-power-off}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-signal-diag{
-		@if(variable-exists(fa-var-rss)){
+		@extend .fas;
+		@if(variable-exists(fa-var-wifi)){
+			&:before{content: $fa-var-wifi}
+		}@else if(variable-exists(fa-var-rss)){
 			&:before{content: $fa-var-rss}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-signal{
+		@extend .fas;
 		@if(variable-exists(fa-var-signal)){
 			&:before{content: $fa-var-signal}
-		}//
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-battery-0{
+		@extend .fas;
 		@if(variable-exists(fa-var-battery-empty)){
 			&:before{content: $fa-var-battery-empty}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-battery-1{
+		@extend .fas;
 		@if(variable-exists(fa-var-battery-quarter)){
 			&:before{content: $fa-var-battery-quarter}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-battery-2{
+		@extend .fas;
 		@if(variable-exists(fa-var-battery-half)){
 			&:before{content: $fa-var-battery-half}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-battery-3{
+		@extend .fas;
 		@if(variable-exists(fa-var-battery-full)){
 			&:before{content: $fa-var-battery-full}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-plus{
+		@extend .fas;
 		@if(variable-exists(fa-var-plus-circle)){
 			&:before{content: $fa-var-plus-circle}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-minus{
+		@extend .fas;
 		@if(variable-exists(fa-var-minus-circle)){
 			&:before{content: $fa-var-minus-circle}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-close{
+		@extend .fas;
 		@if(variable-exists(fa-var-times-circle)){
 			&:before{content: $fa-var-times-circle}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-triangle-e{
+		@extend .fas;
 		@if(variable-exists(fa-var-chevron-circle-right)){
 			&:before{content: $fa-var-chevron-circle-right}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-triangle-s{
+		@extend .fas;
 		@if(variable-exists(fa-var-chevron-circle-down)){
 			&:before{content: $fa-var-chevron-circle-down}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-triangle-w{
+		@extend .fas;
 		@if(variable-exists(fa-var-chevron-circle-left)){
 			&:before{content: $fa-var-chevron-circle-left}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-triangle-n{
+		@extend .fas;
 		@if(variable-exists(fa-var-chevron-circle-up)){
 			&:before{content: $fa-var-chevron-circle-up}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-arrow-e{
-		@if(variable-exists(fa-var-arrow-circle-riight)){
-			&:before{content: $fa-var-arrow-circle-riight}
+		@extend .fas;
+		@if(variable-exists(fa-var-arrow-circle-right)){
+			&:before{content: $fa-var-arrow-circle-right}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-arrow-s{
+		@extend .fas;
 		@if(variable-exists(fa-var-arrow-circle-down)){
 			&:before{content: $fa-var-arrow-circle-down}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-arrow-w{
+		@extend .fas;
 		@if(variable-exists(fa-var-arrow-circle-left)){
 			&:before{content: $fa-var-arrow-circle-left}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-arrow-n{
+		@extend .fas;
 		@if(variable-exists(fa-var-arrow-circle-up)){
 			&:before{content: $fa-var-arrow-circle-up}
 		}
@@ -719,36 +882,43 @@ $jquery-ui-icon-prefix: ui-icon;
 
 	}
 	&.#{$jquery-ui-icon-prefix}-circle-check{
+		@extend .fas;
 		@if(variable-exists(fa-var-check-circle)){
 			&:before{content: $fa-var-check-circle}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-circlesmall-plus{
+		@extend .fas;
 		@if(variable-exists(fa-var-plus-square)){
 			&:before{content: $fa-var-plus-square}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-circlesmall-minus{
+		@extend .fas;
 		@if(variable-exists(fa-var-minus-square)){
 			&:before{content: $fa-var-minus-square}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-circlesmall-close{
+		@extend .fas;
 		@if(variable-exists(fa-var-window-close)){
 			&:before{content: $fa-var-window-close}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-squaresmall-plus{
+		@extend .fas;
 		@if(variable-exists(fa-var-plus-square)){
 			&:before{content: $fa-var-plus-square}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-squaresmall-minus{
+		@extend .fas;
 		@if(variable-exists(fa-var-minus-square)){
 			&:before{content: $fa-var-minus-square}
 		}
 	}
 	&.#{$jquery-ui-icon-prefix}-squaresmall-close{
+		@extend .fas;
 		@if(variable-exists(fa-var-window-close)){
 			&:before{content: $fa-var-window-close}
 		}

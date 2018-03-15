@@ -783,7 +783,7 @@ $jquery-ui-icon-prefix: ui-icon;
 		@extend .fas;
 		@if(variable-exists(fa-var-signal)){
 			&:before{content: $fa-var-signal}
-		}//
+		}
 	}
 	&.#{$jquery-ui-icon-prefix}-battery-0{
 		@extend .fas;
